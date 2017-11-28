@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{5C30379C-82C7-483D-9B5C-82BE147C4EF1}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>UnityEngine.Timeline</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEditor" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnityEngine.Timeline\ActivationControlPlayable.cs" />
+    <Compile Include="UnityEngine.Timeline\ActivationMixerPlayable.cs" />
+    <Compile Include="UnityEngine.Timeline\ActivationPlayableAsset.cs" />
+    <Compile Include="UnityEngine.Timeline\ActivationTrack.cs" />
+    <Compile Include="UnityEngine.Timeline\AnimationDefaultTrack.cs" />
+    <Compile Include="UnityEngine.Timeline\AnimationOutputWeightProcessor.cs" />
+    <Compile Include="UnityEngine.Timeline\AnimationPlayableAsset.cs" />
+    <Compile Include="UnityEngine.Timeline\AnimationTrack.cs" />
+    <Compile Include="UnityEngine.Timeline\AudioPlayableAsset.cs" />
+    <Compile Include="UnityEngine.Timeline\AudioTrack.cs" />
+    <Compile Include="UnityEngine.Timeline\BasicPlayableBehaviour.cs" />
+    <Compile Include="UnityEngine.Timeline\ClipCaps.cs" />
+    <Compile Include="UnityEngine.Timeline\ControlPlayableAsset.cs" />
+    <Compile Include="UnityEngine.Timeline\ControlTrack.cs" />
+    <Compile Include="UnityEngine.Timeline\DirectorControlPlayable.cs" />
+    <Compile Include="UnityEngine.Timeline\DiscreteTime.cs" />
+    <Compile Include="UnityEngine.Timeline\EventPlayable.cs" />
+    <Compile Include="UnityEngine.Timeline\Extrapolation.cs" />
+    <Compile Include="UnityEngine.Timeline\GroupTrack.cs" />
+    <Compile Include="UnityEngine.Timeline\HashUtility.cs" />
+    <Compile Include="UnityEngine.Timeline\IgnoreOnPlayableTrackAttribute.cs" />
+    <Compile Include="UnityEngine.Timeline\IntervalTreeRebalancer.cs" />
+    <Compile Include="UnityEngine.Timeline\IPropertyCollector.cs" />
+    <Compile Include="UnityEngine.Timeline\IPropertyPreview.cs" />
+    <Compile Include="UnityEngine.Timeline\ITimeControl.cs" />
+    <Compile Include="UnityEngine.Timeline\ITimelineClipAsset.cs" />
+    <Compile Include="UnityEngine.Timeline\ITimelineEvaluateCallback.cs" />
+    <Compile Include="UnityEngine.Timeline\ITimelineItem.cs" />
+    <Compile Include="UnityEngine.Timeline\ITimelineMarkerContainer.cs" />
+    <Compile Include="UnityEngine.Timeline\MatchTargetFieldConstants.cs" />
+    <Compile Include="UnityEngine.Timeline\MatchTargetFields.cs" />
+    <Compile Include="UnityEngine.Timeline\NotKeyableAttribute.cs" />
+    <Compile Include="UnityEngine.Timeline\ParticleControlPlayable.cs" />
+    <Compile Include="UnityEngine.Timeline\Placeholder.cs" />
+    <Compile Include="UnityEngine.Timeline\PlayableTrack.cs" />
+    <Compile Include="UnityEngine.Timeline\PrefabControlPlayable.cs" />
+    <Compile Include="UnityEngine.Timeline\RuntimeClip.cs" />
+    <Compile Include="UnityEngine.Timeline\RuntimeClipBase.cs" />
+    <Compile Include="UnityEngine.Timeline\RuntimeElement.cs" />
+    <Compile Include="UnityEngine.Timeline\ScheduleRuntimeClip.cs" />
+    <Compile Include="UnityEngine.Timeline\SupportsChildTracksAttribute.cs" />
+    <Compile Include="UnityEngine.Timeline\TimeControlPlayable.cs" />
+    <Compile Include="UnityEngine.Timeline\TimeFieldAttribute.cs" />
+    <Compile Include="UnityEngine.Timeline\TimelineAsset.cs" />
+    <Compile Include="UnityEngine.Timeline\TimelineClip.cs" />
+    <Compile Include="UnityEngine.Timeline\TimelineClipCapsExtensions.cs" />
+    <Compile Include="UnityEngine.Timeline\TimelineCreateUtilities.cs" />
+    <Compile Include="UnityEngine.Timeline\TimelineMarker.cs" />
+    <Compile Include="UnityEngine.Timeline\TimelinePlayable.cs" />
+    <Compile Include="UnityEngine.Timeline\TimelineUndo.cs" />
+    <Compile Include="UnityEngine.Timeline\TimeUtility.cs" />
+    <Compile Include="UnityEngine.Timeline\TrackAsset.cs" />
+    <Compile Include="UnityEngine.Timeline\TrackAssetExtensions.cs" />
+    <Compile Include="UnityEngine.Timeline\TrackBindingTypeAttribute.cs" />
+    <Compile Include="UnityEngine.Timeline\TrackClipTypeAttribute.cs" />
+    <Compile Include="UnityEngine.Timeline\TrackColorAttribute.cs" />
+    <Compile Include="UnityEngine.Timeline\TrackMediaType.cs" />
+    <Compile Include="UnityEngine.Timeline\WeightUtility.cs" />
+    <Compile Include="UnityEngine\IInterval.cs" />
+    <Compile Include="UnityEngine\IntervalNode.cs" />
+    <Compile Include="UnityEngine\IntervalTree.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

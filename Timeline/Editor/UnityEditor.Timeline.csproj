@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{FC11C114-5D69-40CC-8EFA-C1FF8E936DF8}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>UnityEditor.Timeline</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine" />
+    <Reference Include="UnityEngine.Timeline" />
+    <Reference Include="UnityEditor" />
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnityEditor.Timeline.Analytics\TimelineAnalytics.cs" />
+    <Compile Include="UnityEditor.Timeline.Analytics\TimelineEventInfo.cs" />
+    <Compile Include="UnityEditor.Timeline.Analytics\TimelineSceneInfo.cs" />
+    <Compile Include="UnityEditor.Timeline.Analytics\TrackInfo.cs" />
+    <Compile Include="UnityEditor.Timeline.inspectors\TimeFieldDrawer.cs" />
+    <Compile Include="UnityEditor.Timeline.Utilities\KeyTraverser.cs" />
+    <Compile Include="UnityEditor.Timeline\ActivationPlayableAssetInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\ActivationTrackDrawer.cs" />
+    <Compile Include="UnityEditor.Timeline\ActivationTrackInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\AddTrackSubGroup.cs" />
+    <Compile Include="UnityEditor.Timeline\AnimatedParameterExtensions.cs" />
+    <Compile Include="UnityEditor.Timeline\AnimationClipCurveCache.cs" />
+    <Compile Include="UnityEditor.Timeline\AnimationClipCurveInfo.cs" />
+    <Compile Include="UnityEditor.Timeline\AnimationOffsetMenu.cs" />
+    <Compile Include="UnityEditor.Timeline\AnimationPlayableAssetInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\AnimationTrackDrawer.cs" />
+    <Compile Include="UnityEditor.Timeline\AnimationTrackExtensions.cs" />
+    <Compile Include="UnityEditor.Timeline\AnimationTrackInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\AnimationTrackKeyDataSource.cs" />
+    <Compile Include="UnityEditor.Timeline\AnimationTrackRecorder.cs" />
+    <Compile Include="UnityEditor.Timeline\AttractedEdge.cs" />
+    <Compile Include="UnityEditor.Timeline\AudioPlayableAssetInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\BasicPlayableAssetInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\BreadcrumbDrawer.cs" />
+    <Compile Include="UnityEditor.Timeline\BreadcrumbElement.cs" />
+    <Compile Include="UnityEditor.Timeline\BuiltInPresets.cs" />
+    <Compile Include="UnityEditor.Timeline\ClipActionsShortcutManipulator.cs" />
+    <Compile Include="UnityEditor.Timeline\Clipboard.cs" />
+    <Compile Include="UnityEditor.Timeline\ClipContextMenu.cs" />
+    <Compile Include="UnityEditor.Timeline\ClipExtensions.cs" />
+    <Compile Include="UnityEditor.Timeline\ClipInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\ClipInspectorCurveEditor.cs" />
+    <Compile Include="UnityEditor.Timeline\ClipModifier.cs" />
+    <Compile Include="UnityEditor.Timeline\CompleteLastLoop.cs" />
+    <Compile Include="UnityEditor.Timeline\Control.cs" />
+    <Compile Include="UnityEditor.Timeline\ControlPlayableInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\CopyAction.cs" />
+    <Compile Include="UnityEditor.Timeline\CopyClipsToClipboard.cs" />
+    <Compile Include="UnityEditor.Timeline\CopyMarkersToClipboard.cs" />
+    <Compile Include="UnityEditor.Timeline\CopyTracksToClipboard.cs" />
+    <Compile Include="UnityEditor.Timeline\CursorInfo.cs" />
+    <Compile Include="UnityEditor.Timeline\CurveBindingGroup.cs" />
+    <Compile Include="UnityEditor.Timeline\CurveBindingGroupExtensions.cs" />
+    <Compile Include="UnityEditor.Timeline\CurveBindingPair.cs" />
+    <Compile Include="UnityEditor.Timeline\CurveDataSource.cs" />
+    <Compile Include="UnityEditor.Timeline\CurveEditUtility.cs" />
+    <Compile Include="UnityEditor.Timeline\CustomTrackDrawerAttribute.cs" />
+    <Compile Include="UnityEditor.Timeline\DeleteAction.cs" />
+    <Compile Include="UnityEditor.Timeline\DeleteClips.cs" />
+    <Compile Include="UnityEditor.Timeline\DeleteMarkers.cs" />
+    <Compile Include="UnityEditor.Timeline\DeleteTracks.cs" />
+    <Compile Include="UnityEditor.Timeline\DirectorNamedColorInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\DirectorStyles.cs" />
+    <Compile Include="UnityEditor.Timeline\DoubleSpeed.cs" />
+    <Compile Include="UnityEditor.Timeline\DragClipHandle.cs" />
+    <Compile Include="UnityEditor.Timeline\DrillIntoClip.cs" />
+    <Compile Include="UnityEditor.Timeline\DuplicateAction.cs" />
+    <Compile Include="UnityEditor.Timeline\DuplicateClips.cs" />
+    <Compile Include="UnityEditor.Timeline\DuplicateMarkers.cs" />
+    <Compile Include="UnityEditor.Timeline\DuplicateTracks.cs" />
+    <Compile Include="UnityEditor.Timeline\Edge.cs" />
+    <Compile Include="UnityEditor.Timeline\EditClipInAnimationWindow.cs" />
+    <Compile Include="UnityEditor.Timeline\EditorClip.cs" />
+    <Compile Include="UnityEditor.Timeline\EditorCurveBindingExtension.cs" />
+    <Compile Include="UnityEditor.Timeline\EditorItem.cs" />
+    <Compile Include="UnityEditor.Timeline\EditorItemFactory.cs" />
+    <Compile Include="UnityEditor.Timeline\EditorMarker.cs" />
+    <Compile Include="UnityEditor.Timeline\EditorMarkerInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\EditTrackInAnimationWindow.cs" />
+    <Compile Include="UnityEditor.Timeline\EventContextMenu.cs" />
+    <Compile Include="UnityEditor.Timeline\FindSourceAsset.cs" />
+    <Compile Include="UnityEditor.Timeline\FrameAllAction.cs" />
+    <Compile Include="UnityEditor.Timeline\FrameSelectedAction.cs" />
+    <Compile Include="UnityEditor.Timeline\FrameSnap.cs" />
+    <Compile Include="UnityEditor.Timeline\Gaps.cs" />
+    <Compile Include="UnityEditor.Timeline\GotoEndAction.cs" />
+    <Compile Include="UnityEditor.Timeline\GotoStartAction.cs" />
+    <Compile Include="UnityEditor.Timeline\Graphics.cs" />
+    <Compile Include="UnityEditor.Timeline\GroupTrackInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\GUIColorOverride.cs" />
+    <Compile Include="UnityEditor.Timeline\HalfSpeed.cs" />
+    <Compile Include="UnityEditor.Timeline\HideInMenuAttribute.cs" />
+    <Compile Include="UnityEditor.Timeline\IAttractable.cs" />
+    <Compile Include="UnityEditor.Timeline\IAttractionHandler.cs" />
+    <Compile Include="UnityEditor.Timeline\IControl.cs" />
+    <Compile Include="UnityEditor.Timeline\IEditorItem.cs" />
+    <Compile Include="UnityEditor.Timeline\InfiniteClipCurveDataSource.cs" />
+    <Compile Include="UnityEditor.Timeline\InfiniteTrackDrawer.cs" />
+    <Compile Include="UnityEditor.Timeline\IPropertyKeyDataSource.cs" />
+    <Compile Include="UnityEditor.Timeline\ISnappable.cs" />
+    <Compile Include="UnityEditor.Timeline\ItemAction.cs" />
+    <Compile Include="UnityEditor.Timeline\ItemActionInvoker.cs" />
+    <Compile Include="UnityEditor.Timeline\ItemSelectionIndicator.cs" />
+    <Compile Include="UnityEditor.Timeline\ITimelineState.cs" />
+    <Compile Include="UnityEditor.Timeline\Jog.cs" />
+    <Compile Include="UnityEditor.Timeline\LockTrack.cs" />
+    <Compile Include="UnityEditor.Timeline\MagnetEngine.cs" />
+    <Compile Include="UnityEditor.Timeline\ManipulateEdges.cs" />
+    <Compile Include="UnityEditor.Timeline\Manipulator.cs" />
+    <Compile Include="UnityEditor.Timeline\MarkerModifiers.cs" />
+    <Compile Include="UnityEditor.Timeline\MatchDuration.cs" />
+    <Compile Include="UnityEditor.Timeline\MenuActionDisplayState.cs" />
+    <Compile Include="UnityEditor.Timeline\MenuItemActionBase.cs" />
+    <Compile Include="UnityEditor.Timeline\MouseWheelHorizontalScroll.cs" />
+    <Compile Include="UnityEditor.Timeline\MoveClip.cs" />
+    <Compile Include="UnityEditor.Timeline\MoveClipAttractionHandler.cs" />
+    <Compile Include="UnityEditor.Timeline\MoveEvent.cs" />
+    <Compile Include="UnityEditor.Timeline\MoveEventAttractionHandler.cs" />
+    <Compile Include="UnityEditor.Timeline\MoveItemUtilities.cs" />
+    <Compile Include="UnityEditor.Timeline\MuteTrack.cs" />
+    <Compile Include="UnityEditor.Timeline\NewTrackContextMenu.cs" />
+    <Compile Include="UnityEditor.Timeline\NextFrameAction.cs" />
+    <Compile Include="UnityEditor.Timeline\NextKeyAction.cs" />
+    <Compile Include="UnityEditor.Timeline\NudgeClips.cs" />
+    <Compile Include="UnityEditor.Timeline\NudgeLeftAction.cs" />
+    <Compile Include="UnityEditor.Timeline\NudgeRightAction.cs" />
+    <Compile Include="UnityEditor.Timeline\PasteAction.cs" />
+    <Compile Include="UnityEditor.Timeline\PasteIntoAction.cs" />
+    <Compile Include="UnityEditor.Timeline\PendingUpdateDelegate.cs" />
+    <Compile Include="UnityEditor.Timeline\PlayableTrackDrawer.cs" />
+    <Compile Include="UnityEditor.Timeline\PlayTimelineAction.cs" />
+    <Compile Include="UnityEditor.Timeline\PreviousFrameAction.cs" />
+    <Compile Include="UnityEditor.Timeline\PrevKeyAction.cs" />
+    <Compile Include="UnityEditor.Timeline\PropertyCollector.cs" />
+    <Compile Include="UnityEditor.Timeline\RectangleSelect.cs" />
+    <Compile Include="UnityEditor.Timeline\ResetClip.cs" />
+    <Compile Include="UnityEditor.Timeline\ResetSpeed.cs" />
+    <Compile Include="UnityEditor.Timeline\Ripple.cs" />
+    <Compile Include="UnityEditor.Timeline\ScriptableObjectViewPrefs.cs" />
+    <Compile Include="UnityEditor.Timeline\Scrub.cs" />
+    <Compile Include="UnityEditor.Timeline\SelectAllAction.cs" />
+    <Compile Include="UnityEditor.Timeline\SelectAllTracks.cs" />
+    <Compile Include="UnityEditor.Timeline\SelectionManager.cs" />
+    <Compile Include="UnityEditor.Timeline\SelectorTool.cs" />
+    <Compile Include="UnityEditor.Timeline\SeparatorMenuItemAttribute.cs" />
+    <Compile Include="UnityEditor.Timeline\SeparatorMenuItemPosition.cs" />
+    <Compile Include="UnityEditor.Timeline\SequencerContextMenu.cs" />
+    <Compile Include="UnityEditor.Timeline\SequencerModeType.cs" />
+    <Compile Include="UnityEditor.Timeline\ShortcutAttribute.cs" />
+    <Compile Include="UnityEditor.Timeline\Shortcuts.cs" />
+    <Compile Include="UnityEditor.Timeline\SimpleDragClipHandle.cs" />
+    <Compile Include="UnityEditor.Timeline\SnapState.cs" />
+    <Compile Include="UnityEditor.Timeline\Split.cs" />
+    <Compile Include="UnityEditor.Timeline\StyleNormalColorOverride.cs" />
+    <Compile Include="UnityEditor.Timeline\Tile.cs" />
+    <Compile Include="UnityEditor.Timeline\TimeAreaItem.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineAction.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineActiveMode.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineAnimationUtilities.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineAssetEditionMode.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineAssetInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineAssetViewModel.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineClipCurveDataSource.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineDataSource.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineEditor.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineHelpers.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineInactiveMode.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineInspectorUtility.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineMode.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineModeGUIState.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelinePanManipulator.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineRecording.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineRecordingContextualResponder.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineShortcutManipulator.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineTrackBindingState.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineTrackGUI.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineTreeView.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineUIEvent.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineUtility.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineWindow.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineWindowTimeControl.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineWindowViewPrefs.cs" />
+    <Compile Include="UnityEditor.Timeline\TimelineZoomManipulator.cs" />
+    <Compile Include="UnityEditor.Timeline\ToggleTrackAction.cs" />
+    <Compile Include="UnityEditor.Timeline\Tooltip.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackAction.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackAssetInspector.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackAssetRecordingExtensions.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackBindingValidationResult.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackContextMenuManipulator.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackDoubleClick.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackDrawer.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackExtensions.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackheadContextMenu.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackModifier.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackShortcutManipulator.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackVerticalResize.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackViewModelData.cs" />
+    <Compile Include="UnityEditor.Timeline\TrackZoom.cs" />
+    <Compile Include="UnityEditor.Timeline\TrimEnd.cs" />
+    <Compile Include="UnityEditor.Timeline\TrimLastLoop.cs" />
+    <Compile Include="UnityEditor.Timeline\TrimStart.cs" />
+    <Compile Include="UnityEditor.Timeline\UnlockTrack.cs" />
+    <Compile Include="UnityEditor.Timeline\UnMuteTrack.cs" />
+    <Compile Include="UnityEditor.Timeline\UserAction.cs" />
+    <Compile Include="UnityEditor.Timeline\ZoomIn.cs" />
+    <Compile Include="UnityEditor.Timeline\ZoomOut.cs" />
+    <Compile Include="UnityEditorInternal\BindingTreeViewDataSource.cs" />
+    <Compile Include="UnityEditorInternal\BindingTreeViewGUI.cs" />
+    <Compile Include="UnityEditorInternal\CurveTreeViewNode.cs" />
+    <Compile Include="UnityEditor\BindingSelector.cs" />
+    <Compile Include="UnityEditor\ClipCurveEditor.cs" />
+    <Compile Include="UnityEditor\ClipRenderer.cs" />
+    <Compile Include="UnityEditor\GUIViewportScope.cs" />
+    <Compile Include="UnityEditor\IClipCurveEditorOwner.cs" />
+    <Compile Include="UnityEditor\InlineCurveEditor.cs" />
+    <Compile Include="UnityEditor\TimelineBlendHandle.cs" />
+    <Compile Include="UnityEditor\TimelineClipGUI.cs" />
+    <Compile Include="UnityEditor\TimelineClipHandle.cs" />
+    <Compile Include="UnityEditor\TimelineClipUnion.cs" />
+    <Compile Include="UnityEditor\TimelineDragging.cs" />
+    <Compile Include="UnityEditor\TimelineGroupGUI.cs" />
+    <Compile Include="UnityEditor\TimelineItemGUI.cs" />
+    <Compile Include="UnityEditor\TimelineMarkerGUI.cs" />
+    <Compile Include="UnityEditor\TimelineTrackBaseGUI.cs" />
+    <Compile Include="UnityEditor\TimelineTreeViewGUI.cs" />
+    <Compile Include="UnityEngine.Timeline\AudioTrackDrawer.cs" />
+    <Compile Include="UnityEngine.Timeline\DirectorNamedColor.cs" />
+    <Compile Include="UnityEngine.Timeline\TrackType.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
