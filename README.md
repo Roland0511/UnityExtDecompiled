@@ -5,5 +5,5 @@
 ### Current Include Extensions
 * Timeline
 
-### You also can find UnityEngine.dll and UnityEditor.dll in MattRix's repo
+### You can also find UnityEngine.dll and UnityEditor.dll in MattRix's repo
 https://github.com/MattRix/UnityDecompiled
